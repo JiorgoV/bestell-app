@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +10,56 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/template.css">
     <link rel="shortcut icon" href="./assets/Favicon/favicon.ico" type="image/x-icon">
-    
+
     <script src="./scripts/db.js"></script>
     <script src="./scripts/template.js"></script>
     <script src="./scripts/script.js"></script>
 </head>
-<body onload="renderDishes()">
+
+<body onload="init()">
     <header>
         <div>
             <a href="index.html"><img class="header-logo" src="./assets/Logo/Bestell App- Logo.svg" alt="Logo"></a>
         </div>
     </header>
     <div><img class="main-img" src="./assets/img/main-food.jpg" alt=""></div>
-    <div class="restaurant-name"><h1>Schlemmer Paradies</h1></div>
+
+    <div class="restaurant-name">
+        <h1>Schlemmer Paradies</h1>
+    </div>
+    <div class="menu-bar">
+        <a href="#dishesSection"><button>Hauptspeisen</button></a>
+        <a href="#drinksSection"><button>Getränke</button></a>
+        <a href="#toppingsSection"><button>Toppings</button></a>
+        <a href="#dessertsSection"><button>Desserts</button></a>
+    </div>
+
     <div class="ratings">Bewertung(4.2 von 5 Sternen)</div>
-    <section class="content" id="dishesContent"></section>
+
+    <section class="content">
+        <div id="dishesSection">
+            <h2>Hauptspeisen</h2>
+            <div id="dishesContent"></div>
+        </div>
+
+        <div id="drinksSection">
+            <h2>Getränke</h2>
+            <div id="drinksContent"></div>
+        </div>
+
+        <div id="toppingsSection">
+            <h2>Toppings</h2>
+            <div id="toppingsContent"></div>
+        </div>
+
+        <div id="dessertsSection">
+            <h2>Desserts</h2>
+            <div id="dessertsContent"></div>
+        </div>
+    </section>
+
+
     <section class="footer"></section>
 </body>
+
 </html>

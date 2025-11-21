@@ -24,3 +24,11 @@ header {
     height: 64px;
     font-weight: 800;
 }
+
+.menu-bar {
+    background-color: rgba(255, 128, 0, 0.829);
+    height: 48px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
