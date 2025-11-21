@@ -4,14 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bestell-App</title>
+    <link rel="stylesheet" href="./styles/standart.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./styles/template.css">
+    <link rel="shortcut icon" href="./assets/Favicon/favicon.ico" type="image/x-icon">
+    
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/script.js"></script>
 </head>
-<body>
+<body onload="renderDishes()">
     <header>
-        <div class="header-logo">
-            <a href="index.html"><img src="./assets/Logo/Bestell App- Logo.svg" alt="Logo"></a>
+        <div>
+            <a href="index.html"><img class="header-logo" src="./assets/Logo/Bestell App- Logo.svg" alt="Logo"></a>
         </div>
     </header>
-    <section class="content"></section>
+    <div><img class="main-img" src="./assets/img/main-food.jpg" alt=""></div>
+    <div class="restaurant-name"><h1>Schlemmer Paradies</h1></div>
+    <div class="ratings">Bewertung(4.2 von 5 Sternen)</div>
+    <section class="content" id="dishesContent"></section>
     <section class="footer"></section>
 </body>
 </html>

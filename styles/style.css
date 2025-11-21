@@ -1,0 +1,26 @@
+header {
+    height: 160px;
+    background-color: rgb(255,128,0);
+}
+
+.header-logo {
+    height: 144px;
+}
+
+.main-img {
+    height: 320px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.restaurant-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.ratings {
+    height: 64px;
+    font-weight: 800;
+}
