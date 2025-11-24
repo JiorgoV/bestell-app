@@ -6,7 +6,7 @@ function getDishTemplate(indexDishes){
             <p>${myDishes[0].menu.dishes[indexDishes].description}</p>
         </div>
         <div class="button-price">
-            <button class="add-button">+</button>
+            <button class="add-button" onclick="addToCart(${indexDishes}, 'dishes')">+</button>
             <p class="price">${myDishes[0].menu.dishes[indexDishes].price.toFixed(2)}€</p>
         </div>
     </div>
@@ -19,7 +19,7 @@ function getDrinkTemplate(indexDrinks) {
             <h3>${myDishes[0].menu.drinks[indexDrinks].name}</h3>
         </div>
         <div class="button-price">
-            <button class="add-button">+</button>
+            <button class="add-button" onclick="addToCart(${indexDrinks}, 'drinks')">+</button>
             <p class="price">${myDishes[0].menu.drinks[indexDrinks].price.toFixed(2)}€</p>
         </div>
     </div>
@@ -32,7 +32,7 @@ function getToppingTemplate(indexToppings) {
             <h3>${myDishes[0].menu.toppings[indexToppings].name}</h3>
         </div>
         <div class="button-price">
-            <button class="add-button">+</button>
+            <button class="add-button" onclick="addToCart(${indexToppings}, 'toppings')">+</button>
             <p class="price">${myDishes[0].menu.toppings[indexToppings].price.toFixed(2)}€</p>
         </div>
     </div>
@@ -46,9 +46,10 @@ function getDessertTemplate(indexDesserts) {
             <p>${myDishes[0].menu.desserts[indexDesserts].description}</p>
         </div>
         <div class="button-price">
-            <button class="add-button">+</button>
+            <button class="add-button" onclick="addToCart(${indexDesserts}, 'desserts')">+</button>
             <p class="price">${myDishes[0].menu.desserts[indexDesserts].price.toFixed(2)}€</p>
         </div>
     </div>
     `
 }
+
