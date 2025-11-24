@@ -53,3 +53,10 @@ function getDessertTemplate(indexDesserts) {
     `
 }
 
+function getCartItemTemplate(indexCart) {
+    return `<div class="cart-item">
+        <p>${cart[indexCart].name}</p>
+        <p>${cart[indexCart].quantity}x ${cart[indexCart].price}€</p>
+        <div id="basket_sum"></div>
+    </div>`;
+}

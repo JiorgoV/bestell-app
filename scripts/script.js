@@ -78,3 +78,7 @@ function addToCart(index, category) {
 
     renderCart();
 }
+
+function calculateTotalPrice () {
+    
+}
