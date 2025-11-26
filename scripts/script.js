@@ -77,8 +77,18 @@ function addToCart(index, category) {
     }
 
     renderCart();
+    calculateTotalPrice();
 }
 
-function calculateTotalPrice () {
+function calculateTotalPrice() {
+    let totalSum = 0;
     
+    for (let i = 0; i < cart.length; i++) {
+        totalSum += cart[i].price * cart[i].quantity;
+    }
+    
+    let sumRef = document.getElementById('basket_sum');
+    sumRef.innerHTML = `Gesamt: ${totalSum.toFixed(2)}€`;
+    
+    return totalSum;
 }

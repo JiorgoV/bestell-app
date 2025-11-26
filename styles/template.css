@@ -46,3 +46,29 @@
 .dish-card:nth-child(even) .add-button {
     background-color:  rgba(255, 128, 0, 0.829);  
 }
+
+.basket-headline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 56px;
+    font-size: 32px;
+}
+
+.item-quantity {
+    display: flex;
+}
+
+.cart-calculator {
+    height: 24px;
+    display: flex;
+}
+
+.cart-item {
+    height: 72px;
+}
+
+.cart-item-name {
+    height: 32px;
+    font-size: 24px;
+}
