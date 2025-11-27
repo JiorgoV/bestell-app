@@ -39,7 +39,6 @@ function renderDrinks() {
     }
 }
 
-
 function renderDesserts() {
     let dessertsRef = document.getElementById('dessertsContent')
     dessertsRef.innerHTML = "";
