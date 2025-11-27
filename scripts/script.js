@@ -2,10 +2,13 @@
 let cart = []
 
 function init() {
+    loadCart();  
     renderDishes();
     renderDrinks();
     renderToppings();
     renderDesserts();
+    renderCart();  
+    calculateTotalPrice();
 }
 
 function renderDishes() {
@@ -91,4 +94,41 @@ function calculateTotalPrice() {
     sumRef.innerHTML = `Gesamt: ${totalSum.toFixed(2)}€`;
     
     return totalSum;
+}
+
+function increaseQuantity(index) {
+    cart[index].quantity++;
+
+    renderCart();
+    calculateTotalPrice();
+}
+
+function decreaseQuantity(index) {
+    if (cart[index].quantity > 1) {
+        cart[index].quantity--;
+    } else {
+        cart.splice(index, 1);
+    }
+
+    renderCart();
+    calculateTotalPrice();
+}
+
+function deleteFromBasket(index) {
+    cart.splice(index, 1);
+
+    renderCart();
+    calculateTotalPrice();
+}
+
+function saveCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function loadCart() {
+    let savedCart = localStorage.getItem("cart");
+    
+    if (savedCart !== null) {
+        cart = JSON.parse(savedCart);
+    }
 }
