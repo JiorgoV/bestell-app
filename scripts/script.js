@@ -1,6 +1,8 @@
 
 let cart = []
 
+const deliveryCost = 3.50;
+
 function init() {
     loadCart();
     renderDishes();
@@ -84,16 +86,18 @@ function addToCart(index, category) {
 }
 
 function calculateTotalPrice() {
-    let totalSum = 0;
-
+    let subtotal = 0;
     for (let i = 0; i < cart.length; i++) {
-        totalSum += cart[i].price * cart[i].quantity;
+        subtotal += cart[i].price * cart[i].quantity;
     }
-
-    let sumRef = document.getElementById('basket_sum');
-    sumRef.innerHTML = `Gesamt: ${totalSum.toFixed(2)}€`;
-
-    return totalSum;
+    
+    let shipping = deliveryCost;
+    
+    let total = subtotal + shipping;
+    
+    document.getElementById('subtotal').innerHTML = subtotal.toFixed(2) + "€";
+    document.getElementById('shipping').innerHTML = shipping.toFixed(2) + "€";
+    document.getElementById('total').innerHTML = total.toFixed(2) + "€";
 }
 
 function increaseQuantity(index) {
