@@ -2,12 +2,12 @@
 let cart = []
 
 function init() {
-    loadCart();  
+    loadCart();
     renderDishes();
-    renderDrinks();
     renderToppings();
+    renderDrinks();
     renderDesserts();
-    renderCart();  
+    renderCart();
     calculateTotalPrice();
 }
 
@@ -17,6 +17,15 @@ function renderDishes() {
 
     for (let indexDishes = 0; indexDishes < myDishes[0].menu.dishes.length; indexDishes++) {
         dishesRef.innerHTML += getDishTemplate(indexDishes);
+    }
+}
+
+function renderToppings() {
+    let toppingsRef = document.getElementById('toppingsContent')
+    toppingsRef.innerHTML = "";
+
+    for (let indexToppings = 0; indexToppings < myDishes[0].menu.toppings.length; indexToppings++) {
+        toppingsRef.innerHTML += getToppingTemplate(indexToppings);
     }
 }
 
@@ -30,14 +39,6 @@ function renderDrinks() {
     }
 }
 
-function renderToppings() {
-    let toppingsRef = document.getElementById('toppingsContent')
-    toppingsRef.innerHTML = "";
-
-    for (let indexToppings = 0; indexToppings < myDishes[0].menu.toppings.length; indexToppings++) {
-        toppingsRef.innerHTML += getToppingTemplate(indexToppings);
-    }
-}
 
 function renderDesserts() {
     let dessertsRef = document.getElementById('dessertsContent')
@@ -85,14 +86,14 @@ function addToCart(index, category) {
 
 function calculateTotalPrice() {
     let totalSum = 0;
-    
+
     for (let i = 0; i < cart.length; i++) {
         totalSum += cart[i].price * cart[i].quantity;
     }
-    
+
     let sumRef = document.getElementById('basket_sum');
     sumRef.innerHTML = `Gesamt: ${totalSum.toFixed(2)}€`;
-    
+
     return totalSum;
 }
 
@@ -101,6 +102,7 @@ function increaseQuantity(index) {
 
     renderCart();
     calculateTotalPrice();
+    saveCart();
 }
 
 function decreaseQuantity(index) {
@@ -112,6 +114,7 @@ function decreaseQuantity(index) {
 
     renderCart();
     calculateTotalPrice();
+    saveCart();
 }
 
 function deleteFromBasket(index) {
@@ -119,6 +122,7 @@ function deleteFromBasket(index) {
 
     renderCart();
     calculateTotalPrice();
+    saveCart();
 }
 
 function saveCart() {
@@ -127,7 +131,7 @@ function saveCart() {
 
 function loadCart() {
     let savedCart = localStorage.getItem("cart");
-    
+
     if (savedCart !== null) {
         cart = JSON.parse(savedCart);
     }
