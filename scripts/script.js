@@ -1,6 +1,5 @@
 
 let cart = []
-
 const deliveryCost = 3.50;
 
 function init() {
