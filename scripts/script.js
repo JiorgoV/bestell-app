@@ -90,11 +90,11 @@ function calculateTotalPrice() {
     for (let i = 0; i < cart.length; i++) {
         subtotal += cart[i].price * cart[i].quantity;
     }
-    
+
     let shipping = deliveryCost;
-    
+
     let total = subtotal + shipping;
-    
+
     document.getElementById('subtotal').innerHTML = subtotal.toFixed(2) + "€";
     document.getElementById('shipping').innerHTML = shipping.toFixed(2) + "€";
     document.getElementById('total').innerHTML = total.toFixed(2) + "€";
@@ -138,4 +138,25 @@ function loadCart() {
     if (savedCart !== null) {
         cart = JSON.parse(savedCart);
     }
+}
+
+function placeOrder() {
+    if (cart.length === 0) {
+        alert("Dein Warenkorb ist leer!");
+        return;
+    }
+
+    let dialog = document.getElementById('orderDialog');
+    dialog.showModal();
+
+    cart = [];
+
+    saveCart();
+    renderCart();
+    calculateTotalPrice();
+}
+
+function closeOrderDialog() {
+    let dialog = document.getElementById('orderDialog');
+    dialog.close();
 }

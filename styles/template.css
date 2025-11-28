@@ -64,11 +64,3 @@
     display: flex;
 }
 
-.cart-item {
-    height: 72px;
-}
-
-.cart-item-name {
-    height: 32px;
-    font-size: 24px;
-}

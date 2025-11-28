@@ -1,5 +1,5 @@
 
-function getDishTemplate(indexDishes){
+function getDishTemplate(indexDishes) {
     return `<div class="dish-card">
         <div class="dish-description">
             <h3>${myDishes[0].menu.dishes[indexDishes].name}</h3>
@@ -56,10 +56,21 @@ function getDessertTemplate(indexDesserts) {
 
 function getCartItemTemplate(indexCart) {
     let itemTotalPrice = cart[indexCart].price * cart[indexCart].quantity;
+
     return `<div class="cart-item">
-        <div class="cart-item-name"><p>${cart[indexCart].name}</p></div>
-        <div class="cart-calculator"><div class="item-quantity"><button class="minus-button" onclick="decreaseQuantity(${indexCart})">-</button><p>${cart[indexCart].quantity}x <button class="plus-button" onclick="increaseQuantity(${indexCart})">+</button></div>   
-        <div class="item-price">${itemTotalPrice.toFixed(2)}€</p></div><button class="trash-button" onclick="deleteFromBasket(${indexCart})">🗑️</button></div>
-        
+        <div class="cart-item-name">
+            <p>${cart[indexCart].name}</p>
+        </div>
+        <div class="cart-calculator">
+            <div class="item-quantity">
+                <button class="minus-button" onclick="decreaseQuantity(${indexCart})">-</button>
+                <p>${cart[indexCart].quantity}x</p>
+                <button class="plus-button" onclick="increaseQuantity(${indexCart})">+</button>
+            </div>   
+            <div class="item-price">
+                <p>${itemTotalPrice.toFixed(2)}€</p>
+            </div>
+            <button class="trash-button" onclick="deleteFromBasket(${indexCart})">🗑️</button>
+        </div>
     </div>`;
 }

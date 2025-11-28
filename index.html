@@ -66,6 +66,7 @@
                     <p>Zwischensumme: <span id="subtotal">0.00€</span></p>
                     <p>Versandkosten: <span id="shipping">0.00€</span></p>
                     <p>Gesamt: <span id="total">0.00€</span></p>
+                    <button class="order-button" onclick="placeOrder()">Bestellen</button>
                 </div>
             </div>
         </div>
@@ -73,6 +74,14 @@
 
 
     <section class="footer"></section>
+
+    <dialog id="orderDialog">
+    <div class="dialog-content">
+        <h2>✅ Bestellung erfolgreich!</h2>
+        <p>Dies ist eine Testbestellung.</p>
+        <button onclick="closeOrderDialog()">OK</button>
+    </div>
+</dialog>
 </body>
 
 </html>
