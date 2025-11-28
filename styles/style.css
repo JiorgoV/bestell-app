@@ -3,17 +3,18 @@ body {
 }
 
 header {
-    height: 160px;
+    height: 112px;
     background-color: #ff8000;  
 }
 
 .header-logo {
-    height: 144px;
+    height: 96px;
+    margin-top: 8px;
 }
 
 .main-img {
     height: 320px;
-    width: 100%;
+    width: calc(100% - 360px);
     object-fit: cover;
 }
 
@@ -23,10 +24,12 @@ header {
     align-items: center;
     height: 80px;
     color: #333333;  
+    width: calc(100% - 360px);
 }
 
 .ratings {
     height: 64px;
+    width: calc(100% - 360px);
     font-weight: 800;
     color: #333333;
 }
@@ -34,6 +37,7 @@ header {
 .menu-bar {
     background-color: #ff8000;  
     height: 80px;
+    width: calc(100% - 360px);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -61,13 +65,13 @@ header {
 .basket_wrapper {
     position: fixed;
     right: 0;
-    top: calc(144px + 16px);
+    top: calc(96px + 16px);
     width: 360px;
 }
 
 .basket {
     width: 100%;
-    height: calc(100vh - 32px - 32px);
+    height: calc(100vh - 112px);
     background-color: white;
     position: sticky;
     top: 32px;
