@@ -64,3 +64,8 @@
     display: flex;
 }
 
+.content-img {
+    object-fit: cover;
+    height: 320px;
+    width: 100%;
+}
