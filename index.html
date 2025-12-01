@@ -22,59 +22,71 @@
             <a href="index.html"><img class="header-logo" src="./assets/Logo/Bestell App- Logo.svg" alt="Logo"></a>
         </div>
     </header>
-    <div><img class="main-img" src="./assets/img/main-food.jpg" alt=""></div>
+    <div class="main-layout">
+        <div class="main-content">
+            <div><img class="main-img" src="./assets/img/main-food.jpg" alt=""></div>
 
-    <div class="restaurant-name">
-        <h1>Tokyo Ramen</h1>
-    </div>
-    <div class="ratings">Bewertung ⭐4,9(100+)</div>
-    <div class="menu-bar">
-        <a href="#dishesSection"><button class="menu-button">Hauptspeisen</button></a>
-        <a href="#drinksSection"><button class="menu-button">Getränke</button></a>
-        <a href="#toppingsSection"><button class="menu-button">Toppings</button></a>
-        <a href="#dessertsSection"><button class="menu-button">Desserts</button></a>
-    </div>
+            <div class="logo-container"><img class="restaurant-logo" src="./assets/Logo/sakura_logo.png"
+                    alt="Sakura-Logo">
+            </div>
+            <div class="restaurant-name">
+                <h1>Sakura Ramen</h1>
+            </div>
+            <div class="ratings">Bewertung ⭐4,9(100+)</div>
+            <div class="menu-container">
+                <div class="menu-bar">
+                    <a href="#dishesSection"><button class="menu-button">Hauptspeisen</button></a>
+                    <a href="#drinksSection"><button class="menu-button">Getränke</button></a>
+                    <a href="#toppingsSection"><button class="menu-button">Toppings</button></a>
+                    <a href="#dessertsSection"><button class="menu-button">Desserts</button></a>
+                </div>
 
-    <div class="basket_wrapper">
-        <div class="basket">
-            <div class="basket-headline">Warenkorb</div>
-            <div class="basket-content" id="basket_content"></div>
-            <div class="basket-sum" id="basket_sum">
-                <p>Zwischensumme: <span id="subtotal">0.00€</span></p>
-                <p>Versandkosten: <span id="shipping">0.00€</span></p>
-                <p>Gesamt: <span id="total">0.00€</span></p>
-                <button class="order-button" onclick="placeOrder()">Bestellen</button>
+                <section class="content_wrapper">
+                    <div class="content">
+                        <div id="dishesSection">
+                            <img class="content-img" src="./assets/img/ramen-noodles.jpg" alt="">
+                            <h2>Hauptspeisen</h2>
+                            <div id="dishesContent"></div>
+                        </div>
+
+                        <div id="drinksSection">
+                            <img class="content-img" src="./assets/img/drinks.jpg" alt="">
+                            <h2>Getränke</h2>
+                            <div id="drinksContent"></div>
+                        </div>
+
+                        <div id="toppingsSection">
+                            <img class="content-img" src="./assets/img/toppings.jpg" alt="">
+                            <h2>Toppings</h2>
+                            <div id="toppingsContent"></div>
+                        </div>
+
+                        <div id="dessertsSection">
+                            <img class="content-img" src="./assets/img/desserts.jpg" alt="">
+                            <h2>Desserts</h2>
+                            <div id="dessertsContent"></div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="basket_wrapper">
+            <div class="basket">
+                <div class="basket-headline">Warenkorb</div>
+                <div class="basket-content" id="basket_content"></div>
+                <div class="basket-sum" id="basket_sum">
+                    <p>Zwischensumme: <span id="subtotal">0.00€</span></p>
+                    <p>Versandkosten: <span id="shipping">0.00€</span></p>
+                    <p>Gesamt: <span id="total">0.00€</span></p>
+                    <button class="order-button" onclick="placeOrder()">Bestellen</button>
+                </div>
             </div>
         </div>
     </div>
+    </div>
 
-    <section class="content_wrapper">
-        <div class="content">
-            <div id="dishesSection">
-                <img class="content-img" src="./assets/img/ramen-noodles.jpg" alt="">
-                <h2>Hauptspeisen</h2>
-                <div id="dishesContent"></div>
-            </div>
 
-            <div id="drinksSection">
-                <img class="content-img" src="./assets/img/drinks.jpg" alt="">
-                <h2>Getränke</h2>
-                <div id="drinksContent"></div>
-            </div>
-
-            <div id="toppingsSection">
-                <img class="content-img" src="./assets/img/toppings.jpg" alt="">
-                <h2>Toppings</h2>
-                <div id="toppingsContent"></div>
-            </div>
-
-            <div id="dessertsSection">
-                <img class="content-img" src="./assets/img/desserts.jpg" alt="">
-                <h2>Desserts</h2>
-                <div id="dessertsContent"></div>
-            </div>
-        </div>
-    </section>
 
 
     <section class="footer"></section>

@@ -1,10 +1,17 @@
 body {
-    background-color: #f5f5f5;  
+    background-color: #f5f5f5;
 }
 
 header {
     height: 100px;
-    background-color: #ff8000;  
+    background-color: #ff8000;
+    padding-left: 32px;
+}
+
+.footer {
+    height: 100px;
+    background-color: #ff8000;
+    padding-left: 32px;
 }
 
 .header-logo {
@@ -14,8 +21,30 @@ header {
 
 .main-img {
     height: 320px;
-    width: calc(100% - 360px);
+    width: 100%;
     object-fit: cover;
+}
+
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.main-content {
+    width: calc(100% - 300px);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.restaurant-logo {
+    height: 72px;
+    position: absolute;
+    top: 378px;
 }
 
 .restaurant-name {
@@ -23,38 +52,51 @@ header {
     justify-content: center;
     align-items: center;
     height: 80px;
-    color: #333333;  
-    width: calc(100% - 360px);
+    color: #333333;
+    width: 100%;
 }
 
 .ratings {
     height: 64px;
-    width: calc(100% - 360px);
+    width: 100%;
     font-weight: 800;
     color: #333333;
+    padding-left: 32px;
 }
 
 .menu-bar {
-    background-color: #ff8000;  
+    background-color: rgb(231, 229, 229);
     height: 80px;
-    width: calc(100% - 360px);
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     align-items: center;
     color: white;
-    font-weight: 600;
+    position: sticky;
+    top: 0;
+    padding-left: 32px;
+    gap: 24px;
 }
 
 .menu-button {
     height: 48px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.menu-button:hover {
+    background-color: rgb(192, 192, 192);
 }
 
 .content_wrapper {
     display: flex;
-    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     padding: 16px;
-    padding-right: 376px;
 }
 
 .content {
@@ -63,23 +105,21 @@ header {
 }
 
 .basket_wrapper {
-    position: fixed;
-    right: 0;
-    top: 100px;
-    width: 360px;
+    width: 300px;
+    flex-grow: 1;
 }
 
 .basket {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: 100vh;
     background-color: white;
     position: sticky;
-    top: 32px;
+    top: 0;
     display: flex;
     flex-direction: column;
-    border: 2px solid #e0e0e0;  
-    border-radius: 8px;  
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);  
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .basket-headline {
@@ -89,7 +129,7 @@ header {
     font-weight: bold;
     font-size: 18px;
     color: #333333;
-    background-color: #fafafa; 
+    background-color: #fafafa;
 }
 
 .basket-content {
@@ -109,7 +149,7 @@ header {
 .basket-sum p:last-child {
     font-weight: bold;
     font-size: 18px;
-    color: #ff8000; 
+    color: #ff8000;
 }
 
 
@@ -122,12 +162,12 @@ header {
 }
 
 .basket-content::-webkit-scrollbar-thumb {
-    background: #ff8000; 
+    background: #ff8000;
     border-radius: 4px;
 }
 
 .basket-content::-webkit-scrollbar-thumb:hover {
-    background: #ff4d00; 
+    background: #ff4d00;
 }
 
 .cart-item {

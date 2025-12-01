@@ -18,29 +18,9 @@ let myDishes = [
                     "description": "Würzige Miso-Brühe mit Hackfleisch, Mais, Butter und mariniertem Ei"
                 },
                 {
-                    "name": "Spicy Tan Tan Men",
-                    "price": 14.50,
-                    "description": "Scharfe Sesam-Brühe mit Hackfleisch, Pak Choi, Chili-Öl und knusprigem Knoblauch"
-                },
-                {
                     "name": "Veggie Ramen",
                     "price": 11.90,
                     "description": "Vegetarische Gemüsebrühe mit Tofu, Shiitake, Pak Choi, Mais und Sesam"
-                },
-                {
-                    "name": "Tori Paitan Ramen",
-                    "price": 13.90,
-                    "description": "Cremige Hühnerbrühe mit zartem Hähnchenfleisch, Yuzu, Lauch und Nori"
-                },
-                {
-                    "name": "Mazemen (Saucen-Ramen)",
-                    "price": 12.50,
-                    "description": "Nudeln ohne Brühe mit Chashu, Ajitsuke Tamago, Frühlingszwiebeln und spezieller Tare-Sauce"
-                },
-                {
-                    "name": "Karai Ramen",
-                    "price": 14.90,
-                    "description": "Extra scharfe Miso-Brühe mit Kimchi, Schweinefleisch, Ei und Chili-Paste"
                 },
                 {
                     "name": "Tsukemen",
@@ -57,14 +37,6 @@ let myDishes = [
                 {
                     "name": "Softdrinks (Cola, Fanta, Sprite) 0,33l",
                     "price": 2.50
-                },
-                {
-                    "name": "Ramune (Japanische Limonade) 0,2l",
-                    "price": 3.50
-                },
-                {
-                    "name": "Calpico (Joghurtdrink) 0,33l",
-                    "price": 3.20
                 },
                 {
                     "name": "Grüner Tee (warm) 0,3l",
