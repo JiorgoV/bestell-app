@@ -21,6 +21,14 @@
     background-color: rgba(255, 128, 0, 0.829);  
 }
 
+.order-button {
+    height: 32px;
+    width: 120px;
+    background: #ff8000;
+    border: none;
+    cursor: pointer;
+}
+
 .dish-description {
     display: flex;
     flex-direction: column;
@@ -34,20 +42,7 @@
     gap: 32px;
 }
 
-.basket-headline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 56px;
-    font-size: 32px;
-}
-
 .item-quantity {
-    display: flex;
-}
-
-.cart-calculator {
-    height: 24px;
     display: flex;
 }
 
