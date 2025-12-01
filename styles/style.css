@@ -148,7 +148,6 @@ header {
 }
 
 .basket-sum {
-    flex-shrink: 0;
     border-top: 2px solid #e0e0e0;
     padding: 16px;
     background-color: #fafafa;
@@ -225,4 +224,12 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.netto-costs {
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.total-costs {
+    border-bottom: 2px solid #e0e0e0;
 }

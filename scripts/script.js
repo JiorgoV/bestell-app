@@ -91,11 +91,8 @@ function calculateTotalPrice() {
     }
 
     let shipping = deliveryCost;
-
     let netto = subtotal + shipping;
-
     let mwst = netto * 0.19;
-
     let total = netto + mwst;
 
     document.getElementById('subtotal').innerHTML = subtotal.toFixed(2) + "€";
