@@ -67,7 +67,6 @@ function renderCart() {
 
 function addToCart(index, category) {
     let item = myDishes[0].menu[category][index];
-
     let existingItem = null;
 
     for (let i = 0; i < cart.length; i++) {
