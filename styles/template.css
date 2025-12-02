@@ -1,12 +1,18 @@
-
 .dish-card {
     background-color: rgb(231, 229, 229); 
     display: flex;
     justify-content: space-between;
-    height: 160px;
-    padding: 32px;
+    align-items: center;
+    min-height: 140px;
+    padding: 24px;
     margin: 24px;
     border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dish-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .add-button {
@@ -18,36 +24,213 @@
     color: white;
     border: none;
     cursor: pointer;
-    background-color: rgba(255, 128, 0, 0.829);  
+    background-color: rgba(255, 128, 0, 0.829);
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.add-button:hover {
+    background-color: rgba(255, 128, 0, 1);
+    transform: scale(1.05);
+}
+
+.add-button:active {
+    transform: scale(0.95);
 }
 
 .order-button {
-    height: 32px;
-    width: 120px;
+    height: 40px;
+    width: 100%;
     background: #ff8000;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 12px;
+    transition: background-color 0.2s;
+}
+
+.order-button:hover {
+    background-color: #e67300;
+}
+
+.order-button:active {
+    background-color: #cc6600;
 }
 
 .dish-description {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 8px;
+    flex: 1;
+    margin-right: 16px;
+}
+
+.dish-description h3 {
+    font-size: 1.2rem;
+    color: #333333;
+    margin: 0;
+}
+
+.dish-description p {
+    font-size: 0.95rem;
+    color: #666666;
+    line-height: 1.4;
+    margin: 0;
 }
 
 .button-price {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333333;
+    margin: 0;
 }
 
 .item-quantity {
     display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .content-img {
     object-fit: cover;
     height: 320px;
     width: 100%;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+    .dish-card {
+        min-height: 120px;
+        padding: 20px;
+        margin: 16px;
+    }
+
+    .dish-description h3 {
+        font-size: 1.1rem;
+    }
+
+    .dish-description p {
+        font-size: 0.9rem;
+    }
+
+    .add-button {
+        width: 45px;
+        height: 45px;
+        font-size: 28px;
+    }
+
+    .price {
+        font-size: 1.1rem;
+    }
+
+    .content-img {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dish-card {
+        flex-direction: column;
+        align-items: stretch;
+        min-height: auto;
+        padding: 16px;
+        margin: 12px 8px;
+        gap: 16px;
+    }
+
+    .dish-description {
+        margin-right: 0;
+        gap: 6px;
+    }
+
+    .dish-description h3 {
+        font-size: 1.1rem;
+    }
+
+    .dish-description p {
+        font-size: 0.85rem;
+    }
+
+    .button-price {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .add-button {
+        width: 45px;
+        height: 45px;
+        font-size: 28px;
+        order: 2;
+    }
+
+    .price {
+        font-size: 1.1rem;
+        order: 1;
+    }
+
+    .content-img {
+        height: 200px;
+        margin-bottom: 12px;
+    }
+
+    .order-button {
+        height: 48px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 320px) {
+    .dish-card {
+        padding: 12px;
+        margin: 8px 4px;
+        gap: 12px;
+    }
+
+    .dish-description h3 {
+        font-size: 1rem;
+    }
+
+    .dish-description p {
+        font-size: 0.8rem;
+    }
+
+    .add-button {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .content-img {
+        height: 160px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .dish-card {
+        margin: 24px 48px;
+        padding: 32px;
+    }
+
+    .content-img {
+        height: 360px;
+    }
 }

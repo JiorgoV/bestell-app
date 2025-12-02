@@ -56,6 +56,13 @@ function renderCart() {
     for (let indexCart = 0; indexCart < cart.length; indexCart++) {
         cartRef.innerHTML += getCartItemTemplate(indexCart);
     }
+
+    let cartRefMobile = document.getElementById('basket_content_mobile');
+    cartRefMobile.innerHTML = "";
+
+    for (let indexCartMobile = 0; indexCartMobile < cart.length; indexCartMobile++) {
+        cartRefMobile.innerHTML += getCartItemTemplate(indexCartMobile);    
+    }
 }
 
 function addToCart(index, category) {
@@ -100,6 +107,12 @@ function calculateTotalPrice() {
     document.getElementById('netto').innerHTML = netto.toFixed(2) + "€";
     document.getElementById('mwst').innerHTML = mwst.toFixed(2) + "€";
     document.getElementById('total').innerHTML = total.toFixed(2) + "€";
+
+    document.getElementById('subtotal_mobile').innerHTML = subtotal.toFixed(2) + "€";
+    document.getElementById('shipping_mobile').innerHTML = shipping.toFixed(2) + "€";
+    document.getElementById('netto_mobile').innerHTML = netto.toFixed(2) + "€";
+    document.getElementById('mwst_mobile').innerHTML = mwst.toFixed(2) + "€";
+    document.getElementById('total_mobile').innerHTML = total.toFixed(2) + "€";
 }
 
 function increaseQuantity(index) {
