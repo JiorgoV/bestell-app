@@ -77,10 +77,14 @@
                 <div class="basket-headline">Warenkorb</div>
                 <div class="basket-content" id="basket_content"></div>
                 <div class="basket-sum" id="basket_sum">
-                    <div class="netto-costs"><p>Zwischensumme: <span id="subtotal">0.00€</span></p>
-                    <p>Versandkosten: <span id="shipping">0.00€</span></p></div>
-                    <div class="total-costs"><p>Netto-Gesamtkosten: <span id="netto">0.00€</span></p>
-                    <p>Mwst(19%): <span id="mwst">0.00€</span></p></div>
+                    <div class="netto-costs">
+                        <p>Zwischensumme: <span id="subtotal">0.00€</span></p>
+                        <p>Versandkosten: <span id="shipping">0.00€</span></p>
+                    </div>
+                    <div class="total-costs">
+                        <p>Netto-Gesamtkosten: <span id="netto">0.00€</span></p>
+                        <p>Mwst(19%): <span id="mwst">0.00€</span></p>
+                    </div>
                     <p>Gesamt: <span id="total">0.00€</span></p>
                     <button class="order-button" onclick="placeOrder()">Bestellen</button>
                 </div>
@@ -89,22 +93,36 @@
     </div>
     </div>
 
-    <section class="footer"></section>
+    <section class="footer">
+        <div>
+            <a href="index.html"><img class="header-logo" src="./assets/Logo/Bestell App- Logo.svg" alt="Logo"></a>
+        </div>
+        <div class="footer-links">
+            <a href="./kontakt.html">Kontakt</a>
+            <a href="./impressum.html">Impressum</a>
+            <a href="./datenschutz.html">Datenschutz</a>
+        </div>
+        <div class="copyright">Copyright</div>
+    </section>
 
     <dialog class="basket-dialog" id="basket-dialog">
         <div class="basket">
-                <div class="basket-headline">Warenkorb</div>
-                <button onclick="closeBasket()">X</button>
-                <div class="basket-content" id="basket_content_mobile"></div>
-                <div class="basket-sum" id="basket_sum_mobile">
-                    <div class="netto-costs"><p>Zwischensumme: <span id="subtotal_mobile">0.00€</span></p>
-                    <p>Versandkosten: <span id="shipping_mobile">0.00€</span></p></div>
-                    <div class="total-costs"><p>Netto-Gesamtkosten: <span id="netto_mobile">0.00€</span></p>
-                    <p>Mwst(19%): <span id="mwst_mobile">0.00€</span></p></div>
-                    <p>Gesamt: <span id="total_mobile">0.00€</span></p>
-                    <button class="order-button" onclick="placeOrder()">Bestellen</button>
+            <div class="basket-headline">Warenkorb</div>
+            <button onclick="closeBasket()">X</button>
+            <div class="basket-content" id="basket_content_mobile"></div>
+            <div class="basket-sum" id="basket_sum_mobile">
+                <div class="netto-costs">
+                    <p>Zwischensumme: <span id="subtotal_mobile">0.00€</span></p>
+                    <p>Versandkosten: <span id="shipping_mobile">0.00€</span></p>
                 </div>
+                <div class="total-costs">
+                    <p>Netto-Gesamtkosten: <span id="netto_mobile">0.00€</span></p>
+                    <p>Mwst(19%): <span id="mwst_mobile">0.00€</span></p>
+                </div>
+                <p>Gesamt: <span id="total_mobile">0.00€</span></p>
+                <button class="order-button" onclick="placeOrder()">Bestellen</button>
             </div>
+        </div>
     </dialog>
 
     <dialog class="order-dialog" id="orderDialog">

@@ -9,9 +9,26 @@ header {
 }
 
 .footer {
-    height: 100px;
+    height: auto;
     background-color: #ff8000;
     padding-left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+}
+
+.footer-links a {
+    color: white;
+}
+
+.copyright {
+    color: white;
 }
 
 .header-logo {
@@ -77,6 +94,7 @@ header {
     top: 0;
     padding-left: 32px;
     gap: 24px;
+    overflow-x: auto;
 }
 
 .menu-button {
