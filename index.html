@@ -69,6 +69,7 @@
                     </div>
                 </section>
             </div>
+            <button class="basket-button" id="basket-button" onclick="openBasket()">Warenkorb anzeigen</button>
         </div>
 
         <div class="basket_wrapper">
@@ -88,10 +89,23 @@
     </div>
     </div>
 
-
-
-
     <section class="footer"></section>
+
+    <dialog class="basket-dialog" id="basket-dialog">
+        <div class="basket">
+                <div class="basket-headline">Warenkorb</div>
+                <button onclick="closeBasket()">X</button>
+                <div class="basket-content" id="basket_content"></div>
+                <div class="basket-sum" id="basket_sum">
+                    <div class="netto-costs"><p>Zwischensumme: <span id="subtotal">0.00€</span></p>
+                    <p>Versandkosten: <span id="shipping">0.00€</span></p></div>
+                    <div class="total-costs"><p>Netto-Gesamtkosten: <span id="netto">0.00€</span></p>
+                    <p>Mwst(19%): <span id="mwst">0.00€</span></p></div>
+                    <p>Gesamt: <span id="total">0.00€</span></p>
+                    <button class="order-button" onclick="placeOrder()">Bestellen</button>
+                </div>
+            </div>
+    </dialog>
 
     <dialog class="order-dialog" id="orderDialog">
         <div class="dialog-content">

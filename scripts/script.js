@@ -162,3 +162,13 @@ function closeOrderDialog() {
     let dialog = document.getElementById('orderDialog');
     dialog.close();
 }
+
+function openBasket() {
+    let basketDialog = document.getElementById('basket-dialog');
+    basketDialog.showModal();
+}
+
+function closeBasket() {
+    let basketDialog = document.getElementById('basket-dialog');
+    basketDialog.close();
+}
