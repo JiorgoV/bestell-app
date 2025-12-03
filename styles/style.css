@@ -64,9 +64,14 @@ header {
     width: 100%;
 }
 
+.rating-section {
+    display: flex;
+    justify-content: start;
+    gap: 16px;
+}
+
 .ratings {
     height: 48px;
-    width: 100%;
     font-size: 25px;
     font-weight: 800;
     color: #333333;
