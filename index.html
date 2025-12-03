@@ -102,13 +102,15 @@
 
     <dialog class="basket-dialog" id="basket-dialog">
         <div class="basket">
-            <div class="basket-headline">Warenkorb</div>
-            <button onclick="closeBasket()">X</button>
+            <div class="basket-header">
+                <div class="basket-headline">Warenkorb</div>
+                <button class="close-basket" onclick="closeBasket()">X</button>
+            </div>
             <div class="basket-content" id="basket_content_mobile"></div>
             <div class="basket-sum" id="basket_sum_mobile">
                 <div class="netto-costs">
                     <p>Zwischensumme: <span id="subtotal_mobile">0.00€</span></p>
-                    <p>Versandkosten: <span id="shipping_mobile">0.00€</span></p>
+                    <p>Versandkosten: <span id="shipping_mobile">0.00€</span></p> 
                 </div>
                 <div class="total-costs">
                     <p>Netto-Gesamtkosten: <span id="netto_mobile">0.00€</span></p>
@@ -122,8 +124,7 @@
 
     <dialog class="order-dialog" id="orderDialog">
         <div class="dialog-content">
-            <h2>✅ Bestellung erfolgreich!</h2>
-            <p>Das ist eine Testbestellung.</p>
+            <h2>Das ist eine Testbestellung!</h2>
             <button onclick="closeOrderDialog()">OK</button>
         </div>
     </dialog>
