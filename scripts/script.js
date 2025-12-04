@@ -37,17 +37,19 @@ function renderCart() {
     }
 }
 
-function addToCart(index, category) {
-    let item = myDishes[0].menu[category][index];
-    let existingItem = null;
-
+function findItemInCart(itemName) {
     for (let i = 0; i < cart.length; i++) {
-        if (cart[i].name === item.name) {
-            existingItem = cart[i];
-            break;
+        if (cart[i].name === itemName) {
+            return cart[i];  
         }
     }
+    return null; 
+}
 
+function addToCart(index, category) {
+    let item = myDishes[0].menu[category][index];
+    let existingItem = findItemInCart(item.name); 
+    
     if (existingItem !== null) {
         existingItem.quantity++;
     } else {
@@ -57,7 +59,6 @@ function addToCart(index, category) {
             "quantity": 1
         });
     }
-
     renderCart();
     calculateTotalPrice();
 }
