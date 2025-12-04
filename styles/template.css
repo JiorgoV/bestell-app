@@ -70,13 +70,13 @@
 }
 
 .dish-description h3 {
-    font-size: 1.2rem;
+    font-size: 20px;
     color: #333333;
     margin: 0;
 }
 
 .dish-description p {
-    font-size: 0.95rem;
+    font-size: 16px;
     color: #666666;
     line-height: 1.4;
     margin: 0;
@@ -120,11 +120,11 @@
     }
 
     .dish-description h3 {
-        font-size: 1.1rem;
+        font-size: 20px;
     }
 
     .dish-description p {
-        font-size: 0.9rem;
+        font-size: 16px;
     }
 
     .add-button {
@@ -158,11 +158,11 @@
     }
 
     .dish-description h3 {
-        font-size: 1.1rem;
+        font-size: 18px;
     }
 
     .dish-description p {
-        font-size: 0.85rem;
+        font-size: 16px;
     }
 
     .button-price {
@@ -180,7 +180,7 @@
     }
 
     .price {
-        font-size: 1.1rem;
+        font-size: 22px;
         order: 1;
     }
 
@@ -203,11 +203,11 @@
     }
 
     .dish-description h3 {
-        font-size: 1rem;
+        font-size: 18px;
     }
 
     .dish-description p {
-        font-size: 0.8rem;
+        font-size: 16px;
     }
 
     .add-button {
