@@ -4,10 +4,10 @@ const deliveryCost = 3.50;
 
 function init() {
     loadCart();
-    renderDishes();
-    renderToppings();
-    renderDrinks();
-    renderDesserts();
+    renderCategory('dishesContent', 'dishes', getDishTemplate);
+    renderCategory();
+    renderCategory();
+    renderCategory();
     renderCart();
     calculateTotalPrice();
 }
@@ -46,6 +46,15 @@ function renderDesserts() {
 
     for (let indexDesserts = 0; indexDesserts < myDishes[0].menu.desserts.length; indexDesserts++) {
         dessertsRef.innerHTML += getDessertTemplate(indexDesserts);
+    }
+}
+
+function renderCategory(elementId, category, templateFunction) {
+    let categoryRef = document.getElementById(elementId);
+    categoryRef.innerHTML = "";
+
+    for (let indexCategory = 0; indexCategory < myDishes[0].menu[category].length; indexCategory++) {
+        categoryRef.innerHTML += templateFunction(indexCategory, category);
     }
 }
 

@@ -1,13 +1,13 @@
 
-function getDishTemplate(indexDishes) {
+function getDishTemplate(indexDishes, category) {
     return `<div class="dish-card">
         <div class="dish-description">
-            <h3>${myDishes[0].menu.dishes[indexDishes].name}</h3>
-            <p>${myDishes[0].menu.dishes[indexDishes].description}</p>
+            <h3>${myDishes[0].menu[category][indexDishes].name}</h3>
+            <p>${myDishes[0].menu[category][indexDishes].description}</p>
         </div>
         <div class="button-price">
-            <button class="add-button" onclick="addToCart(${indexDishes}, 'dishes')">+</button>
-            <p class="price">${myDishes[0].menu.dishes[indexDishes].price.toFixed(2)}€</p>
+            <button class="add-button" onclick="addToCart(${indexDishes}, '${category}')">+</button>
+            <p class="price">${myDishes[0].menu[category][indexDishes].price.toFixed(2)}€</p>
         </div>
     </div>
     `
