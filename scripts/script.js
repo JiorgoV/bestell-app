@@ -5,48 +5,11 @@ const deliveryCost = 3.50;
 function init() {
     loadCart();
     renderCategory('dishesContent', 'dishes', getDishTemplate);
-    renderCategory();
-    renderCategory();
-    renderCategory();
+    renderCategory('toppingsContent', 'toppings', getToppingTemplate);
+    renderCategory('drinksContent', 'drinks', getDrinkTemplate);
+    renderCategory('dessertsContent', 'desserts', getDessertTemplate);
     renderCart();
     calculateTotalPrice();
-}
-
-function renderDishes() {
-    let dishesRef = document.getElementById('dishesContent')
-    dishesRef.innerHTML = "";
-
-    for (let indexDishes = 0; indexDishes < myDishes[0].menu.dishes.length; indexDishes++) {
-        dishesRef.innerHTML += getDishTemplate(indexDishes);
-    }
-}
-
-function renderToppings() {
-    let toppingsRef = document.getElementById('toppingsContent')
-    toppingsRef.innerHTML = "";
-
-    for (let indexToppings = 0; indexToppings < myDishes[0].menu.toppings.length; indexToppings++) {
-        toppingsRef.innerHTML += getToppingTemplate(indexToppings);
-    }
-}
-
-function renderDrinks() {
-    let drinksRef = document.getElementById('drinksContent')
-    drinksRef.innerHTML = "";
-
-    for (let indexDrinks = 0; indexDrinks < myDishes[0].menu.drinks.length; indexDrinks++) {
-        drinksRef.innerHTML += getDrinkTemplate(indexDrinks);
-
-    }
-}
-
-function renderDesserts() {
-    let dessertsRef = document.getElementById('dessertsContent')
-    dessertsRef.innerHTML = "";
-
-    for (let indexDesserts = 0; indexDesserts < myDishes[0].menu.desserts.length; indexDesserts++) {
-        dessertsRef.innerHTML += getDessertTemplate(indexDesserts);
-    }
 }
 
 function renderCategory(elementId, category, templateFunction) {
