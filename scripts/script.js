@@ -63,6 +63,14 @@ function addToCart(index, category) {
     calculateTotalPrice();
 }
 
+function updatePrices(subtotal, shipping, netto, mwst, total, costName) {
+    document.getElementById('subtotal' + costName).innerHTML = subtotal.toFixed(2) + "€";
+    document.getElementById('shipping' + costName).innerHTML = shipping.toFixed(2) + "€";
+    document.getElementById('netto' + costName).innerHTML = netto.toFixed(2) + "€";
+    document.getElementById('mwst' + costName).innerHTML = mwst.toFixed(2) + "€";
+    document.getElementById('total' + costName).innerHTML = total.toFixed(2) + "€";
+}
+
 function calculateTotalPrice() {
     let subtotal = 0;
     for (let i = 0; i < cart.length; i++) {
@@ -74,17 +82,8 @@ function calculateTotalPrice() {
     let mwst = netto * 0.19;
     let total = netto + mwst;
 
-    document.getElementById('subtotal').innerHTML = subtotal.toFixed(2) + "€";
-    document.getElementById('shipping').innerHTML = shipping.toFixed(2) + "€";
-    document.getElementById('netto').innerHTML = netto.toFixed(2) + "€";
-    document.getElementById('mwst').innerHTML = mwst.toFixed(2) + "€";
-    document.getElementById('total').innerHTML = total.toFixed(2) + "€";
-
-    document.getElementById('subtotal_mobile').innerHTML = subtotal.toFixed(2) + "€";
-    document.getElementById('shipping_mobile').innerHTML = shipping.toFixed(2) + "€";
-    document.getElementById('netto_mobile').innerHTML = netto.toFixed(2) + "€";
-    document.getElementById('mwst_mobile').innerHTML = mwst.toFixed(2) + "€";
-    document.getElementById('total_mobile').innerHTML = total.toFixed(2) + "€";
+    updatePriceDisplay(subtotal, shipping, netto, mwst, total, ''); 
+    updatePriceDisplay(subtotal, shipping, netto, mwst, total, '_mobile');
 }
 
 function increaseQuantity(index) {
