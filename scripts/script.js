@@ -1,6 +1,6 @@
 
 let cart = []
-const deliveryCost = 3.50;
+const DELIVERY_COST = 3.50;
 
 function init() {
     loadCart();
@@ -16,7 +16,7 @@ function renderCategory(elementId, category, templateFunction) {
     let categoryRef = document.getElementById(elementId);
     categoryRef.innerHTML = "";
 
-    for (let indexCategory = 0; indexCategory < myDishes[0].menu[category].length; indexCategory++) {
+    for (let indexCategory = 0; indexCategory < MY_DISHES[0].menu[category].length; indexCategory++) {
         categoryRef.innerHTML += templateFunction(indexCategory, category);
     }
 }
@@ -33,23 +33,23 @@ function renderCart() {
     cartRefMobile.innerHTML = "";
 
     for (let indexCartMobile = 0; indexCartMobile < cart.length; indexCartMobile++) {
-        cartRefMobile.innerHTML += getCartItemTemplate(indexCartMobile);    
+        cartRefMobile.innerHTML += getCartItemTemplate(indexCartMobile);
     }
 }
 
 function findItemInCart(itemName) {
     for (let i = 0; i < cart.length; i++) {
         if (cart[i].name === itemName) {
-            return cart[i];  
+            return cart[i];
         }
     }
-    return null; 
+    return null;
 }
 
 function addToCart(index, category) {
-    let item = myDishes[0].menu[category][index];
-    let existingItem = findItemInCart(item.name); 
-    
+    let item = MY_DISHES[0].menu[category][index];
+    let existingItem = findItemInCart(item.name);
+
     if (existingItem !== null) {
         existingItem.quantity++;
     } else {
@@ -76,14 +76,15 @@ function calculateTotalPrice() {
     for (let i = 0; i < cart.length; i++) {
         subtotal += cart[i].price * cart[i].quantity;
     }
-
-    let shipping = deliveryCost;
+    let shipping = 0;
+    if (cart.length > 0) {
+        shipping = DELIVERY_COST;
+    }
     let netto = subtotal + shipping;
     let mwst = netto * 0.19;
     let total = netto + mwst;
-
-    updatePriceDisplay(subtotal, shipping, netto, mwst, total, ''); 
-    updatePriceDisplay(subtotal, shipping, netto, mwst, total, '_mobile');
+    updatePrices(subtotal, shipping, netto, mwst, total, '');
+    updatePrices(subtotal, shipping, netto, mwst, total, '_mobile');
 }
 
 function increaseQuantity(index) {
@@ -127,11 +128,11 @@ function loadCart() {
 }
 
 function placeOrder() {
+    let dialogAlert = document.getElementById('alertDialog');
     if (cart.length === 0) {
-        alert("Dein Warenkorb ist leer!");
+        dialogAlert.showModal();
         return;
     }
-
     let dialog = document.getElementById('orderDialog');
     dialog.showModal();
 
@@ -145,6 +146,9 @@ function placeOrder() {
 function closeOrderDialog() {
     let dialog = document.getElementById('orderDialog');
     dialog.close();
+
+    let dialogAlert = document.getElementById('alertDialog');
+    dialogAlert.close();
 }
 
 function openBasket() {

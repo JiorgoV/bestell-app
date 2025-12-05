@@ -1,4 +1,4 @@
-let myDishes = [
+const MY_DISHES = [
     {
         "menu": {
             "dishes": [
