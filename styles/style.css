@@ -5,7 +5,12 @@ body {
 header {
     height: 100px;
     background-color: #ff8000;
-    padding-left: 32px;
+}
+
+.header-container {
+    max-width: 1920px;
+    padding: 0 16px;
+    margin: 0 auto;
 }
 
 .footer {
@@ -288,13 +293,6 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.cart-quantity {
-    display: none;
-}
-
-.cart-quantity.show {
-    display: block;
-}
 
 @media(min-width: 1081px) {
     .basket-button {
@@ -330,5 +328,9 @@ header {
     .dialog-content {
         height: 176px;
         width: 240px;
+    }
+
+    .ratings {
+        font-size: 19px;
     }
 }

@@ -8,14 +8,6 @@
     padding: 24px;
     margin: 24px;
     border-radius: 8px;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.dish-card:hover {
-    position: relative;
-    z-index: -1;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .add-button {
@@ -28,12 +20,12 @@
     border: none;
     cursor: pointer;
     background-color: rgba(255, 128, 0, 0.829);
-    transition: background-color 0.2s, transform 0.1s;
+    transition: box-shadow 0.2s;
 }
 
 .add-button:hover {
     background-color: rgba(255, 128, 0, 1);
-    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 128, 0, 0.4);
 }
 
 .add-button:active {

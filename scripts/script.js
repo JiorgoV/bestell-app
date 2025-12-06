@@ -177,14 +177,12 @@ function getTotalCartItems() {
 }
 
 function updateCartButton() {
-    let cartQuantity = document.getElementById('cartQuantity');
+    let basketButton = document.getElementById('basket-button');
     let totalItems = getTotalCartItems();
 
-    cartQuantity.innerHTML = totalItems;
-
     if (totalItems > 0) {
-        cartQuantity.classList.add('show');
+        basketButton.innerHTML = `Warenkorb anzeigen (${totalItems})`;
     } else {
-        cartQuantity.classList.remove('show');
+        basketButton.innerHTML = 'Warenkorb anzeigen';
     }
 }
