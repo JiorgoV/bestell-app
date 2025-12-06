@@ -288,6 +288,14 @@ header {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.cart-quantity {
+    display: none;
+}
+
+.cart-quantity.show {
+    display: block;
+}
+
 @media(min-width: 1081px) {
     .basket-button {
         display: none;

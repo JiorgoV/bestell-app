@@ -160,3 +160,26 @@ function closeBasket() {
     let basketDialog = document.getElementById('basket-dialog');
     basketDialog.close();
 }
+
+function getTotalCartItems() {
+    let total = 0;
+
+    for (let i = 0; i < cart.length; i++) {
+        total = total + cart[i].quantity;
+    }
+    
+    return total;
+}
+
+function updateCartButton() {
+    let cartQuantity = document.getElementById('cartQuantity');
+    let totalItems = getTotalCartItems();
+
+    cartQuantity.innerHTML = totalItems;
+
+    if (totalItems > 0) {
+        cartQuantity.classList.add('show');
+    } else {
+        cartQuantity.classList.remove('show');
+    }
+}
