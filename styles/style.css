@@ -320,14 +320,13 @@ header {
 
 @media(min-width: 320px) and (max-width: 900px) {
     .order-dialog {
-        height: 220px;
-        width: 280px;
-        font-size: 16px;
+        height: 200px;
+        width: 270px;
     }
 
     .dialog-content {
-        height: 176px;
-        width: 240px;
+        height: 160px;
+        width: 220px;
     }
 
     .ratings {
