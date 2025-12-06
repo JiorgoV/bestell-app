@@ -61,6 +61,7 @@ function addToCart(index, category) {
     }
     renderCart();
     calculateTotalPrice();
+    updateCartButton();
 }
 
 function updatePrices(subtotal, shipping, netto, mwst, total, costName) {
@@ -93,6 +94,7 @@ function increaseQuantity(index) {
     renderCart();
     calculateTotalPrice();
     saveCart();
+    updateCartButton();
 }
 
 function decreaseQuantity(index) {
@@ -105,6 +107,7 @@ function decreaseQuantity(index) {
     renderCart();
     calculateTotalPrice();
     saveCart();
+    updateCartButton();
 }
 
 function deleteFromBasket(index) {
@@ -113,6 +116,7 @@ function deleteFromBasket(index) {
     renderCart();
     calculateTotalPrice();
     saveCart();
+    updateCartButton();
 }
 
 function saveCart() {
@@ -141,6 +145,7 @@ function placeOrder() {
     saveCart();
     renderCart();
     calculateTotalPrice();
+    updateCartButton();
 }
 
 function closeOrderDialog() {
