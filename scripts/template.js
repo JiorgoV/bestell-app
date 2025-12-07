@@ -1,57 +1,27 @@
 
-function getDishTemplate(indexDishes, category) {
+function getTemplateWithDescription(index, category) {
     return `<div class="dish-card">
         <div class="dish-description">
-            <h3>${MY_DISHES[0].menu[category][indexDishes].name}</h3>
-            <p>${MY_DISHES[0].menu[category][indexDishes].description}</p>
+            <h3>${MY_DISHES[0].menu[category][index].name}</h3>
+            <p>${MY_DISHES[0].menu[category][index].description}</p>
         </div>
         <div class="button-price">
-            <button class="add-button" onclick="addToCart(${indexDishes}, '${category}')">+</button>
-            <p class="price">${MY_DISHES[0].menu[category][indexDishes].price.toFixed(2)}€</p>
+            <button class="add-button" onclick="addToCart(${index}, '${category}')">+</button>
+            <p class="price">${MY_DISHES[0].menu[category][index].price.toFixed(2)}€</p>
         </div>
-    </div>
-    `
+    </div>`;
 }
 
-function getToppingTemplate(indexToppings, category) {
+function getTemplateWithoutDescription(index, category) {
     return `<div class="dish-card">
         <div class="dish-description">
-            <h3>${MY_DISHES[0].menu[category][indexToppings].name}</h3>
+            <h3>${MY_DISHES[0].menu[category][index].name}</h3>
         </div>
         <div class="button-price">
-            <button class="add-button" onclick="addToCart(${indexToppings}, '${category}')">+</button>
-            <p class="price">${MY_DISHES[0].menu[category][indexToppings].price.toFixed(2)}€</p>
+            <button class="add-button" onclick="addToCart(${index}, '${category}')">+</button>
+            <p class="price">${MY_DISHES[0].menu[category][index].price.toFixed(2)}€</p>
         </div>
-    </div>
-    `
-}
-
-function getDrinkTemplate(indexDrinks, category) {
-    return `<div class="dish-card">
-        <div class="dish-description">
-            <h3>${MY_DISHES[0].menu[category][indexDrinks].name}</h3>
-        </div>
-        <div class="button-price">
-            <button class="add-button" onclick="addToCart(${indexDrinks}, '${category}')">+</button>
-            <p class="price">${MY_DISHES[0].menu[category][indexDrinks].price.toFixed(2)}€</p>
-        </div>
-    </div>
-    `
-}
-
-
-function getDessertTemplate(indexDesserts, category) {
-    return `<div class="dish-card">
-        <div class="dish-description">
-            <h3>${MY_DISHES[0].menu[category][indexDesserts].name}</h3>
-            <p>${MY_DISHES[0].menu[category][indexDesserts].description}</p>
-        </div>
-        <div class="button-price">
-            <button class="add-button" onclick="addToCart(${indexDesserts}, '${category}')">+</button>
-            <p class="price">${MY_DISHES[0].menu[category][indexDesserts].price.toFixed(2)}€</p>
-        </div>
-    </div>
-    `
+    </div>`;
 }
 
 function getCartItemTemplate(indexCart) {

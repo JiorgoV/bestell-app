@@ -4,10 +4,10 @@ const DELIVERY_COST = 3.50;
 
 function init() {
     loadCart();
-    renderCategory('dishesContent', 'dishes', getDishTemplate);
-    renderCategory('toppingsContent', 'toppings', getToppingTemplate);
-    renderCategory('drinksContent', 'drinks', getDrinkTemplate);
-    renderCategory('dessertsContent', 'desserts', getDessertTemplate);
+    renderCategory('dishesContent', 'dishes', getTemplateWithDescription);
+    renderCategory('toppingsContent', 'toppings', getTemplateWithoutDescription);
+    renderCategory('drinksContent', 'drinks', getTemplateWithoutDescription);
+    renderCategory('dessertsContent', 'desserts', getTemplateWithDescription);
     renderCart();
     calculateTotalPrice();
 }
@@ -159,11 +159,13 @@ function closeOrderDialog() {
 function openBasket() {
     let basketDialog = document.getElementById('basket-dialog');
     basketDialog.showModal();
+    document.body.classList.add('no-scroll');
 }
 
 function closeBasket() {
     let basketDialog = document.getElementById('basket-dialog');
     basketDialog.close();
+    document.body.classList.remove('no-scroll');
 }
 
 function getTotalCartItems() {
@@ -172,7 +174,7 @@ function getTotalCartItems() {
     for (let i = 0; i < cart.length; i++) {
         total = total + cart[i].quantity;
     }
-    
+
     return total;
 }
 
